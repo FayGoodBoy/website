@@ -1,0 +1,51 @@
+/* Animasi Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Terapkan animasi fade-in */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Efek hover pada card */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Background gradasi untuk motivasi */
+.motivation-box {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif untuk HP & Tablet */
+@media (max-width: 640px) {
+    .card {
+        padding: 20px;
+    }
+    .motivation-box {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.5rem; /* Lebih kecil di HP */
+    }
+    p {
+        font-size: 0.9rem;
+    }
+}

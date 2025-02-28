@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone - White Tee</title>
+    <link rel="stylesheet" href="project.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="player-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" 
+             alt="Spotify Logo" class="spotify-logo">
+        <h1>🎵 Music 🎶</h1>
+        
+        <div class="playlist">
+            <ul id="playlist">
+                <li onclick="playSong(0)">White Tee - Lil Peep</li>
+                <li onclick="playSong(1)">Dessert - Dawin</li>
+                <li onclick="playSong(2)">Work - Mr.BakeOut</li>
+            </ul>
+        </div>
+
+        <audio id="audioPlayer" controls></audio>
+
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>

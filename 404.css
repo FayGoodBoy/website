@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hacked-text {
+        font-size: 30px;
+    }
+    .popup {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* Background Matrix */
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+/* Main text effect */
+.hacked-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hacked-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    animation: glitch 0.8s infinite alternate;
+}
+
+.hacked-text .red {
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 3px 3px red, -3px -3px blue; transform: skew(2deg); }
+    50% { text-shadow: -3px -3px red, 3px 3px blue; transform: skew(-2deg); }
+    100% { text-shadow: 3px -3px red, -3px 3px blue; transform: skew(2deg); }
+}
+
+/* Fire effect */
+.hacked-text::after {
+    content: "HACKED BY FAYGOODBOY";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: orange;
+    opacity: 0.6;
+    z-index: -1;
+    filter: blur(5px);
+    animation: fire 1s infinite alternate;
+}
+
+@keyframes fire {
+    0% { text-shadow: 0 0 10px orange, 0 0 20px red, 0 0 30px yellow; }
+    100% { text-shadow: 0 0 20px red, 0 0 30px orange, 0 0 40px yellow; }
+}
+
+/* Popup Warning */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    color: red;
+    padding: 20px;
+    border: 2px solid red;
+    box-shadow: 0px 0px 20px red;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    display: none;
+    z-index: 1000;
+    animation: flicker 1s infinite alternate;
+}
+
+.popup button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.popup button:hover {
+    background: darkred;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.1; }
+    100% { opacity: 1; }
+}
+
+/* Threatening messages */
+.hacked-message {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 0 10px red;
+    font-family: 'Courier New', monospace;
+}

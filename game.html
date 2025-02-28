@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skull Clicker - FayGoodBoy</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>💀 Skull Clicker 💀</h1>
+        <p>Click the skull as fast as you can!</p>
+        <div id="score-container">
+            <span>Score: </span><span id="score">0</span>
+        </div>
+        <div id="timer-container">
+            <span>Time Left: </span><span id="time">10</span>s
+        </div>
+        <button id="start-btn">Start Game</button>
+        <div id="game-area">
+            <img src="pngegg.png" id="skull" alt="Skull">
+        </div>
+        <button id="music-btn">Music: Off</button>
+        <footer>&copy; 2025 FayGoodBoy</footer>
+    </div>
+    <audio id="bg-music" loop autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <script src="game.js"></script>
+</body>
+</html>

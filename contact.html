@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Contact Me - FayGoodBoy</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>    
+
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <div class="input-box">
+                <input type="text" id="name" name="name" required placeholder=" " autocomplete="name">
+                <label for="name">Nama Anda</label>
+            </div>
+            <div class="input-box">
+                <input type="email" id="email" name="email" required placeholder=" " autocomplete="email">
+                <label for="email">Email Anda</label>
+            </div>
+            <div class="input-box">
+                <textarea id="message" name="message" required placeholder=" " autocomplete="off"></textarea>
+                <label for="message">Pesan Anda</label>
+            </div>
+            <button type="submit" class="btn">Kirim</button>
+            <p id="loading" class="loading-message" style="display: none;">Mengirim pesan...</p>
+        </form>
+        <p class="copyright">© 2025 FayGoodBoy. All Rights Reserved</p>
+    </div>
+
+    <script src="contact.js"></script>
+</body>
+</html>

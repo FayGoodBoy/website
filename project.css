@@ -1,0 +1,99 @@
+/* Import Google Font */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1DB954, #191414);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Container Utama */
+.player-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 350px;
+}
+
+/* Logo Spotify */
+.spotify-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Playlist */
+.playlist {
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    padding: 10px;
+    background: #282828;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+li:hover, .playing {
+    background: #1DB954;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+    padding: 10px;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    .player-container {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    .spotify-logo {
+        width: 120px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .player-container {
+        max-width: 280px;
+    }
+
+    .spotify-logo {
+        width: 100px;
+    }
+
+    li {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
